@@ -25,12 +25,10 @@ int main(int argc, char *argv[])
 
 	int sockfd, clientfd, portno, n;
 	char buffer[255];
-
 	struct sockaddr_in serv_addr, cli_addr;
-
-	socklen_t clilen;
-	
+	socklen_t clilen;	
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	
 	if(sockfd<0)
 	{
 		errorMsg("Error in socket opening");
